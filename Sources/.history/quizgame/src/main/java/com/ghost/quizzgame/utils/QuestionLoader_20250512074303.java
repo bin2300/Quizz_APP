@@ -1,0 +1,29 @@
+package com.ghost.quizzgame.utils;
+
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.ghost.quizzgame.model.Question;
+
+import java.io.InputStream;
+import java.util.List;
+import java.io.File;
+import java.io.IOException;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.nio.file.*;
+import java.util.*;
+
+public class QuestionLoader {
+    // public static List<Question> loadQuestions(String filename) throws Exception{
+    //     ObjectMapper mapper = new ObjectMapper();
+    //     InputStream is = QuestionLoader.class.getClassLoader().getResourceAsStream("data/"+filename);
+    //     return mapper.readValue(is, new TypeReference<List<Question>>(){});
+    // }
+
+
+    /*
+     * 
+     */
+}
+
+

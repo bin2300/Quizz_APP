@@ -1,0 +1,14 @@
+[
+    {
+      "questionText": "What is the capital of Germany?",
+      "options": ["Berlin", "Munich", "Frankfurt", "Hamburg"],
+      "correctIndex": 0,
+      "timeLimitSegons"
+    },
+    {
+      "questionText": "Which number is even?",
+      "options": ["3", "5", "6", "9"],
+      "correctIndex": 2
+    }
+  ]
+  
