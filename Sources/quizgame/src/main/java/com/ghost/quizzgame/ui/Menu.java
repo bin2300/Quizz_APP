@@ -2,7 +2,6 @@ package com.ghost.quizzgame.ui;
 
 import com.ghost.quizzgame.model.Question;
 import com.ghost.quizzgame.utils.QuestionLoader;
-
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -17,26 +16,28 @@ public class Menu {
     public static void display(Stage stage) {
         stage.setTitle("Quiz Game");
 
-        // Création du layout principal du menu
+        // Layout principal
         Label title = new Label("Bienvenue dans le Quiz Game !");
         title.setStyle("-fx-font-size: 20px; -fx-font-weight: bold;");
-
+        // Liste des buttons
         Button createQuizButton = new Button("Créer un quiz");
         Button takeQuizButton = new Button("Faire un quiz");
+        Button historyButton = new Button("voir l'historique");
 
-        VBox mainLayout = new VBox(20, title, createQuizButton, takeQuizButton);
+
+        VBox mainLayout = new VBox(20, title, createQuizButton, takeQuizButton,historyButton);
         mainLayout.setPadding(new Insets(30));
         mainLayout.setAlignment(Pos.CENTER);
 
         Scene mainScene = new Scene(mainLayout, 400, 300);
 
-        // Action du bouton "Créer un quiz"
+        // Action bouton "Créer un quiz"
         createQuizButton.setOnAction(e -> {
             Alert alert = new Alert(Alert.AlertType.INFORMATION, "Module de création à venir");
             alert.showAndWait();
         });
 
-        // Action du bouton "Faire un quiz"
+        // Action bouton "Faire un quiz"
         takeQuizButton.setOnAction(e -> {
             Map<String, List<Question>> quizzes = QuestionLoader.loadAllQuizzes();
 
@@ -56,17 +57,26 @@ public class Menu {
             Scene quizScene = new Scene(quizListLayout, 400, 400);
             stage.setScene(quizScene);
 
-            // Quand un quiz est sélectionné
+            // Sélection d’un quiz
             listView.setOnMouseClicked(event -> {
                 String selectedQuiz = listView.getSelectionModel().getSelectedItem();
                 if (selectedQuiz != null) {
-                    Alert alert = new Alert(Alert.AlertType.INFORMATION, "Quiz sélectionné : " + selectedQuiz);
-                    alert.showAndWait();
-                    // Tu peux ici appeler une nouvelle vue de jeu
+                    List<Question> selectedQuestions = quizzes.get(selectedQuiz);
+                    if (selectedQuestions != null && !selectedQuestions.isEmpty()) {
+                        QuizWindow.start(stage, selectedQuiz, selectedQuestions);
+                    } else {
+                        Alert error = new Alert(Alert.AlertType.ERROR, "Erreur : Quiz vide ou introuvable.");
+                        error.showAndWait();
+                    }
                 }
             });
         });
 
+
+        // voire l'historique
+        historyButton.setOnAction(e-> ResultHistoryWindow.display(stage));
+
+        // mise a jour
         stage.setScene(mainScene);
         stage.show();
     }

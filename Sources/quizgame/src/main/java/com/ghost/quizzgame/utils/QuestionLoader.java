@@ -12,7 +12,7 @@ import java.util.*;
 
 public class QuestionLoader {
     private static final String RESOURCE_DATA_FOLDER = "data";
-    private static final Path EXTERNAL_DATA_FOLDER = Paths.get("generated_data");
+    private static final Path EXTERNAL_DATA_FOLDER = Paths.get("../generated_data");
     private static final int DEFAULT_TIME_LIMIT = 30;
 
     /**
@@ -38,17 +38,18 @@ public class QuestionLoader {
             System.err.println("Erreur lors de l'accès à 'resources/data' :");
             e.printStackTrace();
         }
-
+                // System.out.println("Chargement de generated_data [Alerte 1]");
+                
         // Charger depuis generated_data/
         if (Files.exists(EXTERNAL_DATA_FOLDER)) {
             try {
+                // System.out.println("Chargement de generated_data");
                 loadFromDirectory(EXTERNAL_DATA_FOLDER, quizzes, mapper);
             } catch (IOException e) {
                 System.err.println("Erreur lors du chargement depuis 'generated_data' :");
                 e.printStackTrace();
             }
         }
-
         return quizzes;
     }
 

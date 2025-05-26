@@ -1,6 +1,8 @@
 com/ghost/quizzgame/editor/QuizEditorWindow.class
 com/ghost/quizzgame/model/QuizResult.class
 com/ghost/quizzgame/service/QuizEditorService.class
+com/ghost/quizzgame/service/ResultService.class
+com/ghost/quizzgame/ui/ResultHistoryWindow.class
 com/ghost/quizzgame/model/Question.class
 com/ghost/quizzgame/utils/QuizCreator.class
 com/ghost/quizzgame/Main.class
