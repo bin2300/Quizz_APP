@@ -1,6 +1,7 @@
 /home/ghost/Work/School/half two/Java II/Quizz_APP/Sources/quizgame/src/main/java/com/ghost/quizzgame/model/Question.java
 /home/ghost/Work/School/half two/Java II/Quizz_APP/Sources/quizgame/src/main/java/com/ghost/quizzgame/service/QuizService.java
 /home/ghost/Work/School/half two/Java II/Quizz_APP/Sources/quizgame/src/main/java/com/ghost/quizzgame/Main.java
+/home/ghost/Work/School/half two/Java II/Quizz_APP/Sources/quizgame/src/main/java/com/ghost/quizzgame/service/AiQuizService.java
 /home/ghost/Work/School/half two/Java II/Quizz_APP/Sources/quizgame/src/main/java/com/ghost/quizzgame/ui/QuizCreationWindow.java
 /home/ghost/Work/School/half two/Java II/Quizz_APP/Sources/quizgame/src/main/java/com/ghost/quizzgame/ui/QuizWindow.java
 /home/ghost/Work/School/half two/Java II/Quizz_APP/Sources/quizgame/src/main/java/com/ghost/quizzgame/utils/QuestionLoader.java
@@ -12,5 +13,6 @@
 /home/ghost/Work/School/half two/Java II/Quizz_APP/Sources/quizgame/src/main/java/com/ghost/quizzgame/ui/ResultHistoryWindow.java
 /home/ghost/Work/School/half two/Java II/Quizz_APP/Sources/quizgame/src/main/java/com/ghost/quizzgame/utils/QuizCreator.java
 /home/ghost/Work/School/half two/Java II/Quizz_APP/Sources/quizgame/src/main/java/com/ghost/quizzgame/ui/Menu.java
+/home/ghost/Work/School/half two/Java II/Quizz_APP/Sources/quizgame/src/main/java/com/ghost/quizzgame/ui/AiQuizGeneratorUI.java
 /home/ghost/Work/School/half two/Java II/Quizz_APP/Sources/quizgame/src/main/java/com/ghost/quizzgame/service/QuizEditorService.java
 /home/ghost/Work/School/half two/Java II/Quizz_APP/Sources/quizgame/src/main/java/com/ghost/quizzgame/service/QuizManagementService.java

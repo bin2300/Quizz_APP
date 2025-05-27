@@ -1,7 +1,10 @@
+com/ghost/quizzgame/service/AiQuizService$1.class
 com/ghost/quizzgame/utils/Quizz_importation.class
 com/ghost/quizzgame/service/QuizEditorService.class
 com/ghost/quizzgame/service/ResultService.class
 com/ghost/quizzgame/ui/ResultHistoryWindow.class
+com/ghost/quizzgame/ui/AiQuizGeneratorUI.class
+com/ghost/quizzgame/service/AiQuizService.class
 com/ghost/quizzgame/ui/ResultWindow.class
 com/ghost/quizzgame/ui/QuizWindow.class
 com/ghost/quizzgame/ui/Menu.class
