@@ -10,7 +10,7 @@ import java.util.List;
 
 public class QuizCreator {
 
-    private static final Path QUIZ_FOLDER = Paths.get("generated_data");
+    private static final Path QUIZ_FOLDER = Paths.get("../generated_data");
     private static final ObjectMapper mapper = new ObjectMapper();
 
     /**

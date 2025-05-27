@@ -22,8 +22,21 @@ public class QuizService {
         this.questions = questions;
     }
 
+    /**
+     * Retourne la question courante, ou lance une exception si on est à la fin.
+     */
     public Question getCurrentQuestion() {
+        if (currentIndex >= questions.size()) {
+            throw new IndexOutOfBoundsException("Aucune question disponible à l'index " + currentIndex);
+        }
         return questions.get(currentIndex);
+    }
+
+    public Question getQuestionByIndex(int index) {
+        if (index < 0 || index >= questions.size()) {
+            throw new IndexOutOfBoundsException("Index de question invalide : " + index);
+        }
+        return questions.get(index);
     }
 
     public int getCurrentIndex() {
@@ -38,7 +51,19 @@ public class QuizService {
         return score;
     }
 
+
+
+    /**
+     * Sauvegarde la réponse de l'utilisateur et incrémente l'index de la question
+     * courante.
+     * Ne fait rien si le quiz est déjà terminé.
+     */
     public void saveUserAnswer(int selectedIndex) {
+        if (isFinished()) {
+            System.err.println("Impossible d'enregistrer la réponse : quiz déjà terminé.");
+            return;
+        }
+
         userAnswers.add(selectedIndex);
         saveTempAnswer(currentIndex, selectedIndex);
 
@@ -53,6 +78,9 @@ public class QuizService {
         return currentIndex >= questions.size();
     }
 
+    /**
+     * Sauvegarde finale du résultat dans un fichier JSON.
+     */
     public void saveFinalResult() {
         Map<String, Object> result = new HashMap<>();
         result.put("quiz", quizName);

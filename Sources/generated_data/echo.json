@@ -1,0 +1,20 @@
+[
+  {
+    "questionText": "What is the capital of Germany?",
+    "options": ["Berlin", "Munich", "Frankfurt", "Hamburg"],
+    "correctIndex": 0,
+    "timeLimitSeconds": 30
+  },
+  {
+    "questionText": "Which number is even?",
+    "options": ["3", "5", "6", "9"],
+    "correctIndex": 2,
+    "timeLimitSeconds": 20
+  },
+  {
+    "questionText": "What color do you get by mixing red and blue?",
+    "options": ["Purple", "Green", "Orange", "Yellow"],
+    "correctIndex": 0,
+    "timeLimitSeconds": 15
+  }
+]
