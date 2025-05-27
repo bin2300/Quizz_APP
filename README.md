@@ -12,11 +12,6 @@
 
 ## AJOUT POTENTIEL
   ### JEU DE QUIZ
-    - ajout de la page de jeu au quiz
-    - ajout d'une intelligence artificiel pour expliquer les solutions des differents quiz 
-    - ajout du systeme de minuterie
+    - Ajout de l'interaction avec gemini api 
 
-  ### CREATION DE QUIZ 
-    - ajout de la page de creation de quiz ,
-    [x] Ajout de la page de controle , et d'importation des quiz 
-    [x] Ajout de la page de management des scores 
+  ### 
